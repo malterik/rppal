@@ -38,7 +38,7 @@ type IoctlLong = c_int;
 
 const PATH_GPIOCHIP: &str = "/dev/gpiochip";
 const CONSUMER_LABEL: &str = "RPPAL";
-const DRIVER_NAME: &[u8] = b"pinctrl-bcm2835\0";
+const DRIVER_NAME: &[u8] = b"pinctrl-bcm2711\0";
 const DRIVER_NAME_CM4: &[u8] = b"pinctrl-bcm2711\0";
 const NRBITS: u8 = 8;
 const TYPEBITS: u8 = 8;
