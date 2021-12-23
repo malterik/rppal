@@ -56,7 +56,7 @@ pub fn user_to_uid(name: &str) -> Option<u32> {
             if libc::getpwnam_r(
                 name_cstr.as_ptr(),
                 &mut pwd,
-                buf.as_mut_ptr() as *mut i8,
+                buf.as_mut_ptr() as *mut u8,
                 buf.len(),
                 &mut res,
             ) == 0
@@ -86,7 +86,7 @@ pub fn group_to_gid(name: &str) -> Option<u32> {
             if libc::getgrnam_r(
                 name_cstr.as_ptr(),
                 &mut grp,
-                buf.as_mut_ptr() as *mut i8,
+                buf.as_mut_ptr() as *mut u8,
                 buf.len(),
                 &mut res,
             ) == 0
